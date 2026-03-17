@@ -1,0 +1,26 @@
+name: Workflow of exercise 3
+run-name: Third workflow
+
+# Events triggering the workflow
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+
+env:
+    MyVariable: "Hello World"
+
+jobs:
+    job_id:
+        runs-on: ubuntu-latest
+        env:
+            JobVariable: "This is a job variable"
+        steps:
+        - run: echo "${{env.MyVariable}}"
+        - run: echo "${MyVariable}"
+        - run: echo "${{secrets.GITHUB_TOKEN}}"
+        - run: echo "${github.token}"
+
