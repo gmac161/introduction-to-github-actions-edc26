@@ -24,4 +24,6 @@ jobs:
         - run: echo "${JobVariable}"
         - run: echo "${{secrets.GITHUB_TOKEN}}"
         - run: echo "${{github.token}}"
+        - if: ${{env.MYSECRET == 'jabberwocky'}}
+          run: echo "secret is correct"
 
