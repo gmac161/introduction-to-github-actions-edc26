@@ -21,13 +21,13 @@ jobs:
         steps:
             - run: echo "Hello, I'm macos-latest!"
     slow_multistep_job:
-        timeout-minutes: 1
+        timeout-minutes: 5
         runs-on: ubuntu-latest
         steps:
             - name: "Introduction"
               run: echo "Hello, I'm a slow job"
             - name: "Sleepy time...zzzzZZZZ"
-              run: sleep 120
+              run: sleep 30
     waiting_job:
         needs: slow_multistep_job
         runs-on: ubuntu-latest
