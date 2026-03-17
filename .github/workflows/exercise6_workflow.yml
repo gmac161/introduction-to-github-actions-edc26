@@ -21,5 +21,5 @@ jobs:
               uses: actions/upload-artifact@v7
               with:
                 name: my-artifact
-                path: exercises_v2.pdf
+                path: exercises.pdf
                 retention-days: 5 
