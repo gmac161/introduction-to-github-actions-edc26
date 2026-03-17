@@ -1,5 +1,7 @@
 name: Workflow of exercise 2
 run-name: Second workflow
+permissions:
+    contents: read
 
 # Events triggering the workflow
 on:
