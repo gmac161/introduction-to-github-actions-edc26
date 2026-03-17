@@ -12,6 +12,7 @@ on:
 
 env:
     MyVariable: "Hello World"
+    SecretValue: ${{ secrets.MySecret }}
 
 jobs:
     job_id:
@@ -24,6 +25,6 @@ jobs:
         - run: echo "${JobVariable}"
         - run: echo "${{secrets.GITHUB_TOKEN}}"
         - run: echo "${{github.token}}"
-        - if: ${{env.MYSECRET == 'jabberwocky'}}
+        - if: ${{env.SecretValue == 'jabberwocky'}}
           run: echo "secret is correct"
 
