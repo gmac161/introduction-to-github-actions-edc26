@@ -1,5 +1,5 @@
-name: Workflow of exercise 1
-run-name: First workflow 
+name: Workflow of exercise 6
+run-name: Sixth workflow 
 permissions:
     contents: read
 
