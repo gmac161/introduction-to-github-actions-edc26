@@ -14,8 +14,9 @@ jobs:
         runs-on: ubuntu-latest
         container: pandoc/extra
         steps:
+            - uses: actions/checkout@v6
             - name: "Create file"
-              run: pandoc --template eisvogel exercises.md -o exercises_v2.pdf
+              run: pandoc --template eisvogel exercises.md -o exercises.pdf
             - name: "Upload file"
               uses: actions/upload-artifact@v7
               with:
