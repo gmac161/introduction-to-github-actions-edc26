@@ -21,6 +21,7 @@ jobs:
         steps:
         - run: echo "${{env.MyVariable}}"
         - run: echo "${MyVariable}"
+        - run: echo "${JobVariable}"
         - run: echo "${{secrets.GITHUB_TOKEN}}"
         - run: echo "${{github.token}}"
 
